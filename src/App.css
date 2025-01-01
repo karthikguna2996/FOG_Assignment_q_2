@@ -11,18 +11,28 @@
 /* Grid container */
 .grid {
   display: grid;
-  gap: 1px; /* Reduced gap for denser grid */
+  gap: 0; /* No gap between cells for continuous grid lines */
   width: 90vw;
   height: 90vh;
-  background-color: rgba(30, 30, 30, 0.8); /* Visible grid background */
+  background: repeating-linear-gradient(
+      to right,
+      rgba(128, 128, 128, 0.3) 1px,
+      transparent 1px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(128, 128, 128, 0.3) 1px,
+      transparent 1px
+    );
+  background-size: calc(100% / 30) calc(100% / 20); /* Adjust grid cell sizes */
+  background-color: black;
 }
 
 /* Grid cells */
 .cell {
   width: 100%;
   aspect-ratio: 1;
-  background-color: rgba(50, 50, 50, 0.3); /* Default grid cell background */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Visible border for grid cells */
+  background-color: transparent; /* Transparent cells to show the background grid */
   transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
