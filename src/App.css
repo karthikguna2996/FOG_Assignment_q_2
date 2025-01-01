@@ -1,0 +1,33 @@
+/* App styling */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Grid container */
+.grid {
+  display: grid;
+  gap: 1px; /* Reduced gap for denser grid */
+  width: 90vw;
+  height: 90vh;
+  background-color: rgba(30, 30, 30, 0.8); /* Visible grid background */
+}
+
+/* Grid cells */
+.cell {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: rgba(50, 50, 50, 0.3); /* Default grid cell background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Visible border for grid cells */
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Active cell (main drop) */
+.cell.active {
+  background-color: magenta;
+  box-shadow: 0 0 15px magenta, 0 0 30px magenta;
+}
