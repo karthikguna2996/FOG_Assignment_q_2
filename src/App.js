@@ -25,7 +25,7 @@ const App = () => {
           };
         })
       );
-    }, 150);
+    }, 200);
 
      
     const colorInterval = setInterval(() => {

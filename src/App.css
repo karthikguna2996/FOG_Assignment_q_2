@@ -1,4 +1,4 @@
-/* App styling */
+ 
 .app {
   display: flex;
   justify-content: center;
@@ -8,10 +8,10 @@
   overflow: hidden;
 }
 
-/* Grid container */
+ 
 .grid {
   display: grid;
-  gap: 0; /* No gap between cells for continuous grid lines */
+  gap: 0;  
   width: 100vw;
   height: 100vh;
   background: repeating-linear-gradient(
@@ -28,27 +28,27 @@
       grey calc(100% / 20 - 1px),
       grey calc(100% / 20)
     );
-  background-color: black; /* Light lavender-like background */
-  position: relative; /* Positioning for any potential overlays */
+  background-color: black;  
+  position: relative; 
 }
 
-/* Grid cells */
+ 
 .cell {
   width: 100%;
   aspect-ratio: 1;
-  background-color: transparent; /* Transparent cells to show the grid background */
+  background-color: transparent;  
   transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   position: relative;
-  z-index: 1; /* Ensure cells are above the background */
+  z-index: 1;  
 }
 
-/* Active cell (main drop) */
+ 
 .cell.active {
   background-color: magenta;
   box-shadow: 0 0 15px magenta, 0 0 30px magenta;
 }
 
-/* Trail cells */
+ 
 .cell:not(.active) {
   transition: opacity 0.2s ease-in-out;
 }
